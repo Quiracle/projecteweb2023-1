@@ -26,3 +26,10 @@ class WebScrape(object):
 
     def get_data(self):
         self.get_web()
+        self.parse_html()
+        return self.data
+    
+if __name__ == "__main__":
+    client = WebScrape()
+    dades= client.get_data()
+    print(dades)
